@@ -8,7 +8,8 @@ export default {
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
+    handleClick: { action: "hello world"},
+    // backgroundColor: { control: 'color' },
   },
 };
 
@@ -37,4 +38,12 @@ export const Small = Template.bind({});
 Small.args = {
   size: 'small',
   label: 'Button',
+};
+
+export const LongLabel = Template.bind({});
+LongLabel.args = {
+  size: 'large',
+  label: 'Press Me',
+  backgroundColor: 'green',
+  color: 'white'
 };
